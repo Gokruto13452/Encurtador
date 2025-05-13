@@ -3,6 +3,7 @@ package com.exemplo.encurtadorurl.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Column;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Url {
@@ -13,6 +14,16 @@ public class Url {
     @Column(nullable = false)
     private String originalUrl;
 
+    @ManyToOne
+    private Usuario usuario;
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 
     public Url() {}
 

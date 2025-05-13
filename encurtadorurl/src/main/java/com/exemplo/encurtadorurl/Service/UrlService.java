@@ -1,6 +1,7 @@
 package com.exemplo.encurtadorurl.service;
 
 import com.exemplo.encurtadorurl.model.Url;
+import com.exemplo.encurtadorurl.model.Usuario;
 import com.exemplo.encurtadorurl.repository.UrlRepository;
 import com.exemplo.encurtadorurl.exception.CodigoNaoEncontradoException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +15,12 @@ public class UrlService {
     @Autowired
     private UrlRepository repo;
 
-    public String shortenUrl(String originalUrl) {
+    public String shortenUrl(String originalUrl, Usuario usuario) {
         String code = UUID.randomUUID().toString().substring(0, 6);
         Url url = new Url();
         url.setOriginalUrl(originalUrl);
         url.setShortCode(code);
+        url.setUsuario(usuario);
         repo.save(url);
         return code;
     }
