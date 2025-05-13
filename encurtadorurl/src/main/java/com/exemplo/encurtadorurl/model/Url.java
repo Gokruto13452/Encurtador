@@ -13,10 +13,10 @@ public class Url {
     @Column(nullable = false)
     private String originalUrl;
 
-    // ✅ Construtor vazio obrigatório para o JPA
+
     public Url() {}
 
-    // (opcional) Construtor com campos
+
     public Url(String shortCode, String originalUrl) {
         this.shortCode = shortCode;
         this.originalUrl = originalUrl;
