@@ -3,7 +3,7 @@ package com.exemplo.encurtadorurl.controller;
 import com.exemplo.encurtadorurl.Service.UsuarioService;
 import com.exemplo.encurtadorurl.dto.UrlRequestDTO;
 import com.exemplo.encurtadorurl.model.Usuario;
-import com.exemplo.encurtadorurl.service.UrlService; // corrigido
+import com.exemplo.encurtadorurl.service.UrlService; 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
