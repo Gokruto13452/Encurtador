@@ -16,11 +16,23 @@ public class UrlEncurtada {
     @ManyToOne
     private Usuario usuario;
 
-    public Long getId() { return id;}
+    public Long getId() {
+        return id;
+    }
 
-    public String getOriginalUrl() { return originalUrl;}
-    public void setShortUrl(String shortUrl) {this.shortUrl = shortUrl; }
+    public String getOriginalUrl() {
+        return originalUrl;
+    }
 
-    public Usuario getUsuario() { return usuario; }
-    public void setUsuario(Usuario usuario) {this.usuario = usuario; }
+    public void setShortUrl(String shortUrl) {
+        this.shortUrl = shortUrl;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 }
