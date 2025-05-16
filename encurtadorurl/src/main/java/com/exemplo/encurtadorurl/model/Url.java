@@ -17,23 +17,13 @@ public class Url {
     @ManyToOne
     private Usuario usuario;
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
     public Url() {}
-
 
     public Url(String shortCode, String originalUrl) {
         this.shortCode = shortCode;
         this.originalUrl = originalUrl;
     }
 
-    // Getters e Setters
     public String getShortCode() {
         return shortCode;
     }
@@ -48,5 +38,13 @@ public class Url {
 
     public void setOriginalUrl(String originalUrl) {
         this.originalUrl = originalUrl;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }
